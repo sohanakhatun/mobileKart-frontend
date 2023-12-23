@@ -98,13 +98,19 @@ const Navbar = () => {
           }/>
           <button>
               {localStorage.getItem("user") ? (
-                <p className="bg-white p-[8px] rounded-lg w-[90px] font-semibold mt-2">
-                  Login
-                </p>
+                
+                <button onClick={clickHandler} className="bg-white p-[8px] rounded-lg w-[90px] font-semibold">
+                  Logout
+                </button>
+          
+               
               ) : (
-                <p className="bg-white p-[8px] rounded-lg w-[90px] font-semibold mt-2">
+                <Link to="/register">
+                <button className="bg-white p-[8px] rounded-lg w-[90px] font-semibold">
                   Signin
-                </p>
+                </button>
+                </Link>
+                
               )}
             </button>
         </div>
